@@ -39,8 +39,8 @@ body {
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 17px;
+  line-height: 1.56;
 }
 
 button,
@@ -165,7 +165,7 @@ h3 {
 .hero__copy {
   max-width: 58ch;
   color: var(--text);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
 }
 
 .hero__meta {
@@ -182,6 +182,7 @@ h3 {
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(10px);
   color: var(--navy);
+  font-size: 1.02rem;
 }
 
 .button {
@@ -251,6 +252,7 @@ main {
 .intro__text p {
   max-width: 62ch;
   color: var(--muted);
+  font-size: clamp(1.06rem, 1.7vw, 1.16rem);
 }
 
 .intro__details,
@@ -272,7 +274,7 @@ main {
 
 .detail__label {
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.9rem;
 }
 
 .copy-pix {
@@ -303,6 +305,7 @@ main {
 
 .rsvp__header p {
   color: var(--muted);
+  font-size: clamp(1.06rem, 1.7vw, 1.16rem);
 }
 
 .rsvp-form,
@@ -408,7 +411,7 @@ input[type="text"]:focus,
 .block-heading p {
   margin-bottom: 0;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 1.02rem;
 }
 
 .name-list {
@@ -464,11 +467,12 @@ input[type="text"]:focus,
 .payment-action p {
   margin: 0;
   color: var(--text);
+  font-size: 1.02rem;
 }
 
 .summary span {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.88rem;
 }
 
 .summary strong {
