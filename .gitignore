@@ -1,6 +1,7 @@
 .playwright-mcp/
 apps-script/
 public/
+README.md
 *.pdf
 rsvp-*.png
 Barbara 2026 - Convite casamento.png
