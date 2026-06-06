@@ -262,9 +262,14 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
     const value = button.dataset.copy;
     try {
       await navigator.clipboard.writeText(value);
-      button.textContent = "Pix copiado";
+      const originalLabel = button.getAttribute("aria-label");
+      button.setAttribute("aria-label", "Pix copiado");
+      button.title = "Pix copiado";
+      button.classList.add("is-copied");
       window.setTimeout(() => {
-        button.textContent = value;
+        button.setAttribute("aria-label", originalLabel || "Copiar chave Pix");
+        button.title = "Copiar chave Pix";
+        button.classList.remove("is-copied");
       }, 1800);
     } catch {
       setMessage(`Pix: ${value}`, "success");

@@ -277,17 +277,47 @@ main {
   font-size: 0.9rem;
 }
 
+.pix-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.pix-key {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .copy-pix {
-  width: fit-content;
-  border: 0;
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   padding: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.78);
   color: var(--ink);
   cursor: pointer;
-  text-align: left;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.25em;
+  font-size: 1rem;
+  line-height: 1;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease;
+}
+
+.copy-pix:hover {
+  transform: translateY(-1px);
+  border-color: rgba(65, 139, 162, 0.42);
+  background: rgba(194, 217, 238, 0.42);
+}
+
+.copy-pix.is-copied {
+  border-color: rgba(73, 127, 97, 0.45);
+  background: rgba(73, 127, 97, 0.12);
+  color: var(--success);
 }
 
 .rsvp {
