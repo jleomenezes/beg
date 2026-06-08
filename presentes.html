@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Informações de presente para o casamento de Bárbara e Gabriel."
+    />
+    <title>Bárbara & Gabriel | Como nos presentear</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23f8fbfb'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='28' fill='%23176b83' font-family='Georgia'%3EBG%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preload" as="image" href="assets/convite/brasao.png" />
+    <link rel="preload" as="image" href="assets/convite/presente-fundo.png" />
+    <link rel="stylesheet" href="presentes.css" />
+  </head>
+  <body>
+    <main class="gift-page" aria-labelledby="gift-title">
+      <header class="gift-header">
+        <img
+          class="crest-art"
+          src="assets/convite/brasao.png"
+          alt="Brasão de Bárbara e Gabriel"
+          width="614"
+          height="614"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <img
+          class="names-horizontal"
+          src="assets/convite/nomes-horizontal.png"
+          alt="Bárbara e Gabriel"
+          width="2620"
+          height="395"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </header>
+
+      <section class="message-panel" aria-label="Mensagem sobre presentes">
+        <img
+          class="blue-paper"
+          src="assets/convite/presente-fundo.png"
+          alt=""
+          width="1082"
+          height="842"
+          decoding="async"
+        />
+        <div class="message-content">
+          <p>O maior presente para nós é a sua presença neste dia tão especial.</p>
+          <p>
+            Ainda assim, caso deseje nos presentear, receberemos com carinho por
+            meio de presente ou PIX.
+          </p>
+        </div>
+      </section>
+
+      <section class="gift-list" aria-labelledby="gift-title">
+        <img
+          class="gift-icon"
+          src="assets/convite/presente.png"
+          alt=""
+          width="253"
+          height="242"
+          decoding="async"
+        />
+        <h1 id="gift-title">Lista de presentes</h1>
+        <ul>
+          <li>Guararapes</li>
+          <li>Lua de Mel</li>
+          <li>Mãe Rainha</li>
+        </ul>
+      </section>
+
+      <section class="pix-section" aria-labelledby="pix-title">
+        <span class="divider" aria-hidden="true"></span>
+        <img
+          class="qr-code"
+          src="assets/convite/pix-qrcode.png"
+          alt="QR Code Pix para presentear Bárbara e Gabriel"
+          width="500"
+          height="500"
+          decoding="async"
+        />
+        <h2 id="pix-title">Chave PIX</h2>
+        <div class="pix-copy-row">
+          <strong class="pix-key">37 99958-6252</strong>
+          <button
+            class="copy-pix"
+            type="button"
+            data-copy="37 99958-6252"
+            aria-label="Copiar chave Pix 37 99958-6252"
+            title="Copiar chave Pix"
+          >
+            <span aria-hidden="true">⧉</span>
+          </button>
+        </div>
+        <p class="copy-message" data-copy-message role="status"></p>
+      </section>
+
+      <a class="back-link" href="index.html" aria-label="Voltar para o convite">
+        <img
+          src="assets/convite/voltar-convite.png"
+          alt="Voltar para o convite"
+          width="844"
+          height="348"
+          decoding="async"
+        />
+      </a>
+
+      <footer class="gift-footer" aria-hidden="true">
+        <img src="assets/convite/galhos.png" alt="" width="1247" height="682" decoding="async" />
+      </footer>
+    </main>
+
+    <script>
+      const pixButton = document.querySelector("[data-copy]");
+      const copyMessage = document.querySelector("[data-copy-message]");
+
+      pixButton.addEventListener("click", async () => {
+        const value = pixButton.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(value);
+          pixButton.classList.add("is-copied");
+          copyMessage.textContent = "Chave Pix copiada.";
+          window.setTimeout(() => {
+            pixButton.classList.remove("is-copied");
+            copyMessage.textContent = "";
+          }, 1600);
+        } catch {
+          window.prompt("Copie a chave Pix:", value);
+        }
+      });
+    </script>
+  </body>
+</html>

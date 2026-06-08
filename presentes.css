@@ -1,0 +1,268 @@
+:root {
+  color-scheme: light;
+  --ink: #176b83;
+  --ink-dark: #0e5870;
+  --text: #1f738a;
+  --muted: #76aabb;
+  --paper: #fff;
+  --focus: rgba(23, 107, 131, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(236, 245, 249, 0.52), transparent 22%, transparent 78%, rgba(236, 245, 249, 0.52)),
+    #fbfbfb;
+  color: var(--text);
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+}
+
+.gift-page {
+  width: min(100%, 680px);
+  min-height: 100svh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 18px 58px rgba(47, 109, 132, 0.08);
+  text-align: center;
+}
+
+.gift-header {
+  padding: clamp(3.35rem, 12vw, 5.15rem) 0 0;
+}
+
+.crest-art {
+  display: block;
+  width: clamp(8.2rem, 28vw, 11.8rem);
+  margin: 0 auto clamp(3.2rem, 9vw, 4.15rem);
+}
+
+.names-horizontal {
+  display: block;
+  width: 86%;
+  max-width: none;
+  margin: 0 auto clamp(2rem, 6.6vw, 2.8rem);
+}
+
+.message-panel {
+  position: relative;
+  min-height: clamp(22.5rem, 72vw, 30.8rem);
+  display: grid;
+  align-items: center;
+  padding: clamp(4.5rem, 11vw, 5.7rem) clamp(1.7rem, 8vw, 4.5rem) clamp(4.2rem, 10vw, 5.4rem);
+}
+
+.blue-paper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.message-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 1.8rem);
+  color: var(--ink);
+  font-size: clamp(1.42rem, 4.45vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.58;
+}
+
+.message-content p {
+  margin: 0;
+}
+
+.gift-list {
+  padding: clamp(2.85rem, 8.4vw, 3.55rem) 1.4rem 1rem;
+}
+
+.gift-icon {
+  display: block;
+  width: clamp(2.45rem, 7vw, 3rem);
+  margin: 0 auto 0.45rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: var(--ink);
+}
+
+h1 {
+  font-family: Vivaldi, "Edwardian Script ITC", "Bickham Script Pro", Georgia, "Times New Roman", serif;
+  font-size: clamp(2.45rem, 8.5vw, 3.65rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0.92;
+}
+
+.gift-list ul {
+  display: grid;
+  gap: clamp(0.48rem, 1.7vw, 0.7rem);
+  width: max-content;
+  max-width: 100%;
+  margin: clamp(1.25rem, 4vw, 1.7rem) auto 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: clamp(1.55rem, 5.6vw, 2.25rem);
+  line-height: 1.15;
+  list-style: none;
+  text-align: left;
+}
+
+.gift-list li::before {
+  content: "♡";
+  margin-right: 0.35rem;
+  color: #4fa2b7;
+  font-weight: 700;
+}
+
+.pix-section {
+  padding: clamp(0.35rem, 1.8vw, 0.65rem) 1.4rem 0;
+}
+
+.divider {
+  display: block;
+  width: clamp(6.9rem, 19vw, 8.1rem);
+  height: 1px;
+  margin: 0 auto clamp(1.75rem, 5vw, 2.2rem);
+  background: linear-gradient(90deg, transparent, rgba(23, 107, 131, 0.22), transparent);
+}
+
+.qr-code {
+  display: block;
+  width: min(17.1rem, 41vw);
+  margin: 0 auto clamp(1.8rem, 5vw, 2.25rem);
+  background: #fff;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 5.1vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.pix-copy-row {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.pix-key {
+  color: var(--ink);
+  font-size: clamp(1.55rem, 5.2vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.copy-pix {
+  display: inline-grid;
+  width: clamp(2.2rem, 6vw, 2.65rem);
+  height: clamp(2.2rem, 6vw, 2.65rem);
+  place-items: center;
+  border: 1px solid rgba(23, 107, 131, 0.24);
+  border-radius: 0.45rem;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: clamp(1rem, 3vw, 1.18rem);
+  line-height: 1;
+}
+
+.copy-pix.is-copied {
+  background: rgba(23, 107, 131, 0.1);
+}
+
+.copy-message {
+  min-height: 1.4rem;
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.back-link {
+  display: block;
+  width: min(14.3rem, 38%);
+  margin: clamp(2rem, 5.5vw, 2.8rem) auto 0;
+}
+
+.back-link img {
+  display: block;
+}
+
+.copy-pix:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 0.35rem;
+}
+
+.gift-footer img {
+  display: block;
+  width: 112%;
+  max-width: none;
+  margin-left: -6%;
+  transform: translateY(-4.7rem);
+}
+
+.gift-footer {
+  height: clamp(8.7rem, 24vw, 10.2rem);
+  margin-top: -1.1rem;
+  overflow: hidden;
+}
+
+@media (min-width: 760px) {
+  body {
+    padding-block: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .message-content {
+    font-size: 1.35rem;
+  }
+
+  .gift-list ul {
+    font-size: 1.55rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

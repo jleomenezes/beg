@@ -1,0 +1,398 @@
+:root {
+  color-scheme: light;
+  --ink: #176b83;
+  --ink-dark: #0e5870;
+  --text: #2e8298;
+  --muted: #6fa5b6;
+  --paper: #fff;
+  --paper-soft: #fafafa;
+  --blue: #b9d2e8;
+  --line: rgba(23, 107, 131, 0.24);
+  --focus: rgba(23, 107, 131, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(236, 245, 249, 0.52), transparent 22%, transparent 78%, rgba(236, 245, 249, 0.52)),
+    #fbfbfb;
+  color: var(--text);
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.names-art,
+.couple-art,
+.rings-art,
+.map-link img,
+.branch,
+.gift-art,
+.crest-art,
+.invite-footer img {
+  height: auto;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  border-radius: 6px;
+  background: var(--ink-dark);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+}
+
+.skip-link:not(:focus-visible) {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link:focus-visible,
+.map-link:focus-visible,
+.soft-button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+.invite-page {
+  width: min(100%, 430px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 18px 58px rgba(47, 109, 132, 0.08);
+}
+
+.opening {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.verse {
+  margin: 0 auto 1.5rem;
+  color: var(--text);
+  font-size: clamp(0.96rem, 3.45vw, 1.12rem);
+  font-weight: 700;
+  line-height: 1.34;
+}
+
+.verse span {
+  display: block;
+  margin-top: 0.16rem;
+  color: var(--muted);
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+.names-art {
+  display: block;
+  width: 88%;
+  margin: 0 auto -0.35rem;
+}
+
+.couple-section {
+  margin-top: -0.15rem;
+}
+
+.couple-art {
+  display: block;
+  width: 100%;
+}
+
+.ceremony,
+.gift-section,
+.big-day,
+.closing {
+  position: relative;
+  padding-inline: clamp(1.4rem, 8vw, 3rem);
+  text-align: center;
+}
+
+.ceremony {
+  padding-top: clamp(2.15rem, 9vw, 3.2rem);
+  padding-bottom: 2.6rem;
+}
+
+.rings-art {
+  display: block;
+  width: clamp(4.8rem, 21vw, 6.4rem);
+  margin: 0 auto 0.35rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: Vivaldi, "Edwardian Script ITC", "Bickham Script Pro", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.ceremony h1 {
+  margin-bottom: 0.72rem;
+  font-size: clamp(2.7rem, 12vw, 4rem);
+  line-height: 0.95;
+}
+
+.ceremony p {
+  margin: 0 auto 1rem;
+  color: var(--text);
+  font-size: clamp(1rem, 4.3vw, 1.22rem);
+  line-height: 1.22;
+}
+
+.ceremony strong {
+  color: var(--ink-dark);
+  font-weight: 800;
+}
+
+.map-link {
+  position: relative;
+  display: block;
+  width: min(22rem, 92%);
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.map-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-link span {
+  position: absolute;
+  left: 62%;
+  top: 50%;
+  color: #fff;
+  font-size: clamp(1.05rem, 4vw, 1.3rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+}
+
+.gift-section {
+  padding-top: 1rem;
+  padding-bottom: 3.2rem;
+}
+
+.branch {
+  position: absolute;
+  pointer-events: none;
+}
+
+.branch--left {
+  left: -7.2rem;
+  top: 0.2rem;
+  width: 12rem;
+}
+
+.gift-art {
+  display: block;
+  width: clamp(3rem, 14vw, 4.1rem);
+  margin: 0 auto 0.4rem;
+}
+
+.gift-section h2 {
+  margin-bottom: 1.35rem;
+  font-size: clamp(2.05rem, 10vw, 3.1rem);
+  line-height: 0.82;
+}
+
+.soft-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 3.7rem;
+  width: min(20rem, 100%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: var(--blue);
+  color: #fff;
+  font-size: clamp(0.96rem, 3.6vw, 1.16rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.click-icon {
+  position: absolute;
+  width: clamp(2.1rem, 8vw, 2.75rem);
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+}
+
+.click-icon--gift {
+  right: 0.9rem;
+  bottom: -1.35rem;
+}
+
+.soft-button--confirm {
+  background: linear-gradient(135deg, #82b5cc, #4e91ad);
+  box-shadow: 0 14px 34px rgba(78, 145, 173, 0.22);
+}
+
+.heart {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--ink);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.big-day {
+  padding-top: 3rem;
+  padding-bottom: 4.2rem;
+  background: var(--paper-soft);
+}
+
+.big-day h2,
+.closing h2 {
+  font-size: clamp(2.1rem, 9vw, 3.15rem);
+  line-height: 0.98;
+}
+
+.big-day ul {
+  display: grid;
+  gap: 1rem;
+  width: min(22rem, 100%);
+  margin: 1.55rem auto 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: clamp(0.9rem, 3.55vw, 1rem);
+  font-weight: 750;
+  line-height: 1.18;
+  list-style: none;
+  text-align: left;
+}
+
+.big-day li {
+  position: relative;
+  padding-left: 1.18rem;
+}
+
+.big-day li::before {
+  content: "♥";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.closing {
+  padding-top: 3.8rem;
+  padding-bottom: 0.7rem;
+}
+
+.branch--right {
+  right: -7.5rem;
+  top: 1.45rem;
+  width: 10.6rem;
+}
+
+.closing h2 {
+  margin-bottom: 1.15rem;
+}
+
+.closing p {
+  width: min(23rem, 100%);
+  margin: 0 auto 1.05rem;
+  font-size: clamp(0.95rem, 3.7vw, 1.08rem);
+  line-height: 1.34;
+}
+
+.crest-art {
+  display: block;
+  width: clamp(6.9rem, 34vw, 9rem);
+  margin: 1.1rem auto 1.9rem;
+}
+
+.closing small {
+  display: block;
+  margin-top: 2.05rem;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.invite-footer {
+  margin-top: -0.7rem;
+}
+
+.invite-footer img {
+  display: block;
+  width: 112%;
+  max-width: none;
+  margin-left: -6%;
+}
+
+.confirm-presence {
+  padding: 0.6rem clamp(1.4rem, 8vw, 3rem) 3rem;
+  text-align: center;
+}
+
+.confirm-presence h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 8.5vw, 3rem);
+  line-height: 1;
+}
+
+@media (min-width: 760px) {
+  body {
+    padding-block: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .opening {
+    padding-top: 1.55rem;
+  }
+
+  .names-art {
+    width: 92%;
+  }
+
+  .branch--left {
+    left: -7.8rem;
+  }
+
+  .branch--right {
+    right: -7.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

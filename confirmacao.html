@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Confirme sua presença na celebração do casamento de Bárbara e Gabriel."
+    />
+    <title>Bárbara & Gabriel | Confirmação de Presença</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23151625'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='30' fill='%23f6f0e7' font-family='Georgia'%3EBG%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preload" as="image" href="foto.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#confirmacao">Ir para confirmação</a>
+
+    <header class="hero" aria-label="Convite de casamento de Bárbara e Gabriel">
+      <img
+        class="hero__image"
+        src="foto.png"
+        alt="Bárbara e Gabriel sorrindo ao ar livre"
+        width="1080"
+        height="1271"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow">18 de julho de 2026, às 16h</p>
+        <h1>Bárbara & Gabriel</h1>
+        <p class="hero__copy">
+          Decidimos comemorar este capítulo ao lado dos padrinhos e familiares
+          mais próximos. Será uma alegria contar com sua presença nesse dia tão
+          especial.
+        </p>
+        <div class="hero__meta" aria-label="Informações principais do evento">
+          <span>Igreja do Rosário, Cláudio-MG</span>
+          <span>Mesa mineira no Jarbas após a cerimônia</span>
+        </div>
+        <a class="button button--primary" href="#confirmacao">Confirmar presença</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="celebracao-title">
+        <div class="intro__text">
+          <h2 id="celebracao-title">Venha celebrar conosco.</h2>
+          <p>
+            🍽️A celebração acontecerá no Jarbas, com uma deliciosa mesa mineira
+            preparada para aproveitarmos juntos.
+          </p>
+          <p>
+            🍻A mesa mineira será oferecida por nós com muito carinho, e apenas
+            as bebidas serão cobradas separadamente, de acordo com o consumo
+            individual. 🍻
+          </p>
+          <p>
+            ✨Ficaremos muito felizes em compartilhar esse momento com pessoas
+            que fazem parte da nossa história, que estiveram ao nosso lado nos
+            momentos importantes e que torcem verdadeiramente pela nossa
+            felicidade.
+          </p>
+        </div>
+      </section>
+
+      <section class="rsvp" id="confirmacao" aria-labelledby="rsvp-title">
+        <div class="rsvp__header">
+          <h2 id="rsvp-title">Podemos contar com sua presença?</h2>
+          <p>
+            Confirme seu nome e informe se levará acompanhante. Se houver
+            acompanhante, envie o comprovante pelo WhatsApp.
+          </p>
+        </div>
+
+        <form class="rsvp-form" id="rsvpForm" novalidate>
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <fieldset class="choice-group">
+            <legend>Resposta</legend>
+            <label class="choice-card">
+              <input type="radio" name="attendance" value="confirmado" />
+              <span>Pode reservar meu lugar</span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="attendance" value="nao_irei" />
+              <span>Não irei</span>
+            </label>
+          </fieldset>
+
+          <div class="presence-fields" data-presence-fields hidden>
+            <div class="field">
+              <label for="respondentName">Nome do convidado</label>
+              <input
+                id="respondentName"
+                name="respondentName"
+                type="text"
+                maxlength="80"
+                autocomplete="name"
+                placeholder="Digite o seu nome."
+              />
+            </div>
+
+            <div class="dynamic-block companions" data-companion-section>
+              <div class="block-heading">
+                <div>
+                  <h3>Acompanhantes</h3>
+                  <p>
+                    Para os acompanhantes, haverá uma contribuição no valor de
+                    R$ 70,00 referente à mesa mineira. As bebidas serão cobradas
+                    à parte, de acordo com o consumo individual.
+                  </p>
+                  <p>
+                    Pedimos apenas que nos envie o nome do acompanhante juntamente
+                    com o comprovante do Pix abaixo ✨
+                  </p>
+                </div>
+                <button class="button button--ghost" type="button" data-add-companion>
+                  Adicionar acompanhante
+                </button>
+              </div>
+              <div class="name-list" data-companion-list></div>
+            </div>
+
+            <aside class="summary" aria-live="polite">
+              <div>
+                <span>Pessoas confirmadas</span>
+                <strong data-total-people>1</strong>
+              </div>
+              <div>
+                <span>Acompanhantes</span>
+                <strong data-total-companions>0</strong>
+              </div>
+              <div>
+                <span>Contribuição</span>
+                <strong data-total-price>R$ 0,00</strong>
+              </div>
+            </aside>
+
+            <div class="payment-action" data-payment-action hidden>
+              <div class="payment-info" aria-label="Dados de contribuição do acompanhante">
+                <div>
+                  <span class="detail__label">Pix</span>
+                  <span class="pix-copy-row">
+                    <span class="pix-key">bargonsilva@gmail.com</span>
+                    <button
+                      class="copy-pix"
+                      type="button"
+                      data-copy="bargonsilva@gmail.com"
+                      aria-label="Copiar chave Pix"
+                      title="Copiar chave Pix"
+                    >
+                      <span aria-hidden="true">⧉</span>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <a class="button button--secondary" data-whatsapp href="#" target="_blank" rel="noopener">
+                Enviar comprovante pelo WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <p class="form-message" data-form-message role="status"></p>
+
+          <div class="form-actions" data-form-actions hidden>
+            <button class="button button--primary" type="submit" data-submit>
+              Enviar confirmação
+            </button>
+          </div>
+        </form>
+
+        <section class="success-panel" data-success hidden aria-live="polite">
+          <p class="eyebrow">Confirmação enviada</p>
+          <h2>Obrigado por responder.</h2>
+          <p data-success-summary></p>
+          <a class="button button--primary" data-success-whatsapp href="#" target="_blank" rel="noopener">
+            Abrir WhatsApp
+          </a>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Bárbara & Gabriel · 18 de julho de 2026</p>
+    </footer>
+
+    <template id="nameRowTemplate">
+      <div class="name-row">
+        <label>
+          <span data-label>Nome</span>
+          <input type="text" maxlength="80" autocomplete="off" />
+        </label>
+        <button class="icon-button" type="button" aria-label="Remover nome" data-remove-name>
+          ×
+        </button>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
