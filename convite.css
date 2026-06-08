@@ -256,10 +256,6 @@ h2 {
   bottom: -1.35rem;
 }
 
-.soft-button--confirm {
-  background: linear-gradient(135deg, #82b5cc, #4e91ad);
-  box-shadow: 0 14px 34px rgba(78, 145, 173, 0.22);
-}
 
 .heart {
   display: block;
@@ -354,16 +350,6 @@ h2 {
   margin-left: -6%;
 }
 
-.confirm-presence {
-  padding: 0.6rem clamp(1.4rem, 8vw, 3rem) 3rem;
-  text-align: center;
-}
-
-.confirm-presence h2 {
-  margin-bottom: 1rem;
-  font-size: clamp(2rem, 8.5vw, 3rem);
-  line-height: 1;
-}
 
 @media (min-width: 760px) {
   body {
