@@ -5,206 +5,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Confirme sua presença na celebração do casamento de Bárbara e Gabriel."
+      content="Convite de casamento de Bárbara e Gabriel."
     />
-    <title>Bárbara & Gabriel | Confirmação de Presença</title>
+    <title>Bárbara & Gabriel | Convite de Casamento</title>
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23151625'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='30' fill='%23f6f0e7' font-family='Georgia'%3EBG%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23f8fbfb'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-size='28' fill='%23176b83' font-family='Georgia'%3EBG%3C/text%3E%3C/svg%3E"
     />
-    <link rel="preload" as="image" href="foto.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="assets/convite/nomes.png" />
+    <link rel="preload" as="image" href="assets/convite/noivos.png" />
+    <link rel="stylesheet" href="convite.css" />
   </head>
   <body>
-    <a class="skip-link" href="#confirmacao">Ir para confirmação</a>
+    <a class="skip-link" href="#cerimonia">Ir para cerimônia</a>
 
-    <header class="hero" aria-label="Convite de casamento de Bárbara e Gabriel">
-      <img
-        class="hero__image"
-        src="foto.png"
-        alt="Bárbara e Gabriel sorrindo ao ar livre"
-        width="1080"
-        height="1271"
-        decoding="async"
-        fetchpriority="high"
-      />
-      <div class="hero__shade" aria-hidden="true"></div>
-      <div class="hero__grain" aria-hidden="true"></div>
-
-      <div class="hero__content">
-        <p class="eyebrow">18 de julho de 2026, às 16h</p>
-        <h1>Bárbara & Gabriel</h1>
-        <p class="hero__copy">
-          Decidimos comemorar este capítulo ao lado dos padrinhos e familiares
-          mais próximos. Será uma alegria contar com sua presença nesse dia tão
-          especial.
+    <main class="invite-page" aria-label="Convite de casamento de Bárbara e Gabriel">
+      <header class="opening">
+        <p class="verse">
+          "Acima de tudo, porém, revistam-se<br />
+          do amor, que é o elo perfeito."
+          <span>(Colossenses 3:14)</span>
         </p>
-        <div class="hero__meta" aria-label="Informações principais do evento">
-          <span>Igreja do Rosário, Cláudio-MG</span>
-          <span>Mesa mineira no Jarbas após a cerimônia</span>
-        </div>
-        <a class="button button--primary" href="#confirmacao">Confirmar presença</a>
-      </div>
-    </header>
 
-    <main>
-      <section class="intro" aria-labelledby="celebracao-title">
-        <div class="intro__text">
-          <h2 id="celebracao-title">Venha celebrar conosco.</h2>
-          <p>
-            🍽️A celebração acontecerá no Jarbas, com uma deliciosa mesa mineira
-            preparada para aproveitarmos juntos.
-          </p>
-          <p>
-            🍻A mesa mineira será oferecida por nós com muito carinho, e apenas
-            as bebidas serão cobradas separadamente, de acordo com o consumo
-            individual. 🍻
-          </p>
-          <p>
-            ✨Ficaremos muito felizes em compartilhar esse momento com pessoas
-            que fazem parte da nossa história, que estiveram ao nosso lado nos
-            momentos importantes e que torcem verdadeiramente pela nossa
-            felicidade.
-          </p>
-        </div>
+        <img
+          class="names-art"
+          src="assets/convite/nomes.png"
+          alt="Bárbara e Gabriel"
+          width="946"
+          height="1619"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </header>
+
+      <section class="couple-section" aria-label="Vamos nos casar">
+        <img
+          class="couple-art"
+          src="assets/convite/noivos.png"
+          alt="Vamos nos casar! Foto de Bárbara e Gabriel"
+          width="1082"
+          height="1599"
+          decoding="async"
+          fetchpriority="high"
+        />
       </section>
 
-      <section class="rsvp" id="confirmacao" aria-labelledby="rsvp-title">
-        <div class="rsvp__header">
-          <h2 id="rsvp-title">Podemos contar com sua presença?</h2>
-          <p>
-            Confirme seu nome e informe se levará acompanhante. Se houver
-            acompanhante, envie o comprovante pelo WhatsApp.
-          </p>
-        </div>
+      <section class="ceremony" id="cerimonia" aria-labelledby="ceremony-title">
+        <img
+          class="rings-art"
+          src="assets/convite/aliancas.png"
+          alt=""
+          width="194"
+          height="146"
+          decoding="async"
+        />
+        <h1 id="ceremony-title">Cerimônia</h1>
+        <p>
+          <strong>18 de julho de 2026</strong> às 16h na<br />
+          Igreja do Rosário, Cláudio-MG
+        </p>
 
-        <form class="rsvp-form" id="rsvpForm" novalidate>
-          <div class="honeypot" aria-hidden="true">
-            <label for="website">Website</label>
-            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
-          </div>
-
-          <fieldset class="choice-group">
-            <legend>Resposta</legend>
-            <label class="choice-card">
-              <input type="radio" name="attendance" value="confirmado" />
-              <span>Pode reservar meu lugar</span>
-            </label>
-            <label class="choice-card">
-              <input type="radio" name="attendance" value="nao_irei" />
-              <span>Não irei</span>
-            </label>
-          </fieldset>
-
-          <div class="presence-fields" data-presence-fields hidden>
-            <div class="field">
-              <label for="respondentName">Nome do convidado</label>
-              <input
-                id="respondentName"
-                name="respondentName"
-                type="text"
-                maxlength="80"
-                autocomplete="name"
-                placeholder="Digite o seu nome."
-              />
-            </div>
-
-            <div class="dynamic-block companions" data-companion-section>
-              <div class="block-heading">
-                <div>
-                  <h3>Acompanhantes</h3>
-                  <p>
-                    Para os acompanhantes, haverá uma contribuição no valor de
-                    R$ 70,00 referente à mesa mineira. As bebidas serão cobradas
-                    à parte, de acordo com o consumo individual.
-                  </p>
-                  <p>
-                    Pedimos apenas que nos envie o nome do acompanhante juntamente
-                    com o comprovante do Pix abaixo ✨
-                  </p>
-                </div>
-                <button class="button button--ghost" type="button" data-add-companion>
-                  Adicionar acompanhante
-                </button>
-              </div>
-              <div class="name-list" data-companion-list></div>
-            </div>
-
-            <aside class="summary" aria-live="polite">
-              <div>
-                <span>Pessoas confirmadas</span>
-                <strong data-total-people>1</strong>
-              </div>
-              <div>
-                <span>Acompanhantes</span>
-                <strong data-total-companions>0</strong>
-              </div>
-              <div>
-                <span>Contribuição</span>
-                <strong data-total-price>R$ 0,00</strong>
-              </div>
-            </aside>
-
-            <div class="payment-action" data-payment-action hidden>
-              <div class="payment-info" aria-label="Dados de contribuição do acompanhante">
-                <div>
-                  <span class="detail__label">Pix</span>
-                  <span class="pix-copy-row">
-                    <span class="pix-key">bargonsilva@gmail.com</span>
-                    <button
-                      class="copy-pix"
-                      type="button"
-                      data-copy="bargonsilva@gmail.com"
-                      aria-label="Copiar chave Pix"
-                      title="Copiar chave Pix"
-                    >
-                      <span aria-hidden="true">⧉</span>
-                    </button>
-                  </span>
-                </div>
-              </div>
-              <a class="button button--secondary" data-whatsapp href="#" target="_blank" rel="noopener">
-                Enviar comprovante pelo WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <p class="form-message" data-form-message role="status"></p>
-
-          <div class="form-actions" data-form-actions hidden>
-            <button class="button button--primary" type="submit" data-submit>
-              Enviar confirmação
-            </button>
-          </div>
-        </form>
-
-        <section class="success-panel" data-success hidden aria-live="polite">
-          <p class="eyebrow">Confirmação enviada</p>
-          <h2>Obrigado por responder.</h2>
-          <p data-success-summary></p>
-          <a class="button button--primary" data-success-whatsapp href="#" target="_blank" rel="noopener">
-            Abrir WhatsApp
-          </a>
-        </section>
+        <a
+          class="map-link"
+          href="https://www.google.com/maps/search/?api=1&query=Igreja%20do%20Ros%C3%A1rio%2C%20Cl%C3%A1udio-MG"
+          target="_blank"
+          rel="noopener"
+          aria-label="Ver mapa da Igreja do Rosário, Cláudio-MG"
+        >
+          <img
+            src="assets/convite/local.png"
+            alt=""
+            width="1325"
+            height="556"
+            decoding="async"
+          />
+          <span>Ver mapa</span>
+        </a>
       </section>
+
+      <section class="gift-section" aria-labelledby="gift-title">
+        <img
+          class="branch branch--left"
+          src="assets/convite/galho-2.png"
+          alt=""
+          width="369"
+          height="368"
+          decoding="async"
+        />
+        <img
+          class="gift-art"
+          src="assets/convite/presente.png"
+          alt=""
+          width="253"
+          height="242"
+          decoding="async"
+        />
+        <h2 id="gift-title">Para nos<br />Presentear!</h2>
+        <a
+          class="soft-button"
+          href="presentes.html"
+        >
+          Como nos presentear
+          <img
+            class="click-icon click-icon--gift"
+            src="assets/convite/icone-clique.png"
+            alt=""
+            width="194"
+            height="198"
+            decoding="async"
+          />
+        </a>
+      </section>
+
+      <section class="big-day" aria-labelledby="big-day-title">
+        <span class="heart" aria-hidden="true">♡</span>
+        <h2 id="big-day-title">Para o grande dia!</h2>
+        <ul>
+          <li>Chegue com 30 minutos de antecedência.</li>
+          <li>
+            Por se tratar de um sacramento religioso, sugerimos o uso de trajes
+            adequados ao ambiente, priorizando peças mais respeitosas e evitando
+            roupas curtas ou decotadas.
+          </li>
+        </ul>
+      </section>
+
+      <section class="closing" aria-label="Mensagem aos convidados">
+        <span class="heart" aria-hidden="true">♡</span>
+        <img
+          class="branch branch--right"
+          src="assets/convite/galho.png"
+          alt=""
+          width="369"
+          height="368"
+          decoding="async"
+        />
+        <h2>Te esperamos no altar!</h2>
+        <p>
+          Com gratidão a Deus, aguardamos vocês para viverem esse dia tão sonhado
+          ao nosso lado!
+        </p>
+        <p>Com amor,</p>
+        <img
+          class="crest-art"
+          src="assets/convite/brasao.png"
+          alt="Brasão de Bárbara e Gabriel"
+          width="614"
+          height="614"
+          loading="eager"
+          decoding="async"
+        />
+        <p>
+          Após o sacramento, os noivos receberão os cumprimentos na porta da igreja.
+        </p>
+        <small>Convite individual e intransferível</small>
+      </section>
+
+      <footer class="invite-footer">
+        <img
+          src="assets/convite/galhos.png"
+          alt=""
+          width="1247"
+          height="682"
+          decoding="async"
+        />
+      </footer>
     </main>
-
-    <footer class="footer">
-      <p>Bárbara & Gabriel · 18 de julho de 2026</p>
-    </footer>
-
-    <template id="nameRowTemplate">
-      <div class="name-row">
-        <label>
-          <span data-label>Nome</span>
-          <input type="text" maxlength="80" autocomplete="off" />
-        </label>
-        <button class="icon-button" type="button" aria-label="Remover nome" data-remove-name>
-          ×
-        </button>
-      </div>
-    </template>
-
-    <script src="script.js"></script>
   </body>
 </html>
